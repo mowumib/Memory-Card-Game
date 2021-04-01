@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    
+    <link href="src/fontawesome(5.15.2)/css/all.css" rel="stylesheet">
+    
+    <title>Memory Card Game</title>
+    
+</head>
+<body>
+    <div class="game-container">
+        <div class="scoreBoard">
+            <div class="score">
+              Score：<span class="score-holder">0</span>
+            </div>
+
+            <div class="time-bar">
+              Time：<span class="time-holder">0</span>
+            </div>
+
+            <div class="clicks">
+                Moves: <span class="moves">0</span>
+            </div>
+        </div>
+
+        
+
+        <div class="game">
+            <div class="flipcard" data-id="atom">
+                <div class="front cards"><i class="fas fa-atom"></i></div>
+                <div class="back cards"></div>
+            </div>
+
+            <div class="flipcard" data-id="atom">
+                <div class="front cards"><i class="fas fa-atom"></i></div>
+                <div class="back cards"></div>
+            </div>
+
+            <div class="flipcard" data-id="battlenet">
+                <div class="front cards"><i class="fab fa-battle-net"></i></div>
+                <div class="back cards"></div>
+            </div>
+
+            <div class="flipcard" data-id="battlenet">
+                <div class="front cards"><i class="fab fa-battle-net"></i></div>
+                <div class="back cards"></div>
+            </div>
+
+            <div class="flipcard" data-id="chess">
+                <div class="front cards"><i class="fas fa-chess"></i></div>
+                <div class="back cards"></div>
+            </div>
+
+            <div class="flipcard" data-id="chess">
+                <div class="front cards"><i class="fas fa-chess"></i></div>
+                <div class="back cards"></div>
+            </div>
+
+
+            <div class="flipcard" data-id="cogs">
+                <div class="front cards"><i class="fas fa-cogs"></i></div>
+                <div class="back cards"></div>
+            </div>
+
+            <div class="flipcard"data-id="cogs">
+                <div class="front cards"><i class="fas fa-cogs"></i></div>
+                <div class="back cards"></div>
+            </div>
+
+            <div class="flipcard" data-id="d-and-d">
+                <div class="front cards"><i class="fab fa-d-and-d"></i></div>
+                <div class="back cards"></div>
+            </div>
+
+            <div class="flipcard" data-id="d-and-d">
+                <div class="front cards"><i class="fab fa-d-and-d"></i></div>
+                <div class="back cards"></div>
+            </div>
+
+            <div class="flipcard" data-id="flushed">
+                <div class="front cards"><i class="far fa-flushed"></i></div>
+                <div class="back cards"></div>
+            </div>
+
+            <div class="flipcard" data-id="flushed">
+                <div class="front cards"><i class="far fa-flushed"></i></div>
+                <div class="back cards"></div>
+            </div>
+        </div>
+
+        <button class="startbutton" id="startbtn">Start</button>
+
+
+        
+    </div>
+    <div class="popup-container" id="popup-container">
+        <div id="lose-popup" class="lose-popup">
+            Total Moves: <span class="total-moves" id="total-moves">0</span>
+            Final Score: <span class="totalscore" id="total-score">0</span>
+            <div class="btn-div">
+                <button id="lose-play-again">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="win-popup-container" id="win-popup-container">
+        <div class="popup" id="popup">
+            <h2>You won!! &#x1F973;</h2>
+            <button id="win-play-again">Play Again</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>made by <a href="https://github.com/mowumib">Mowumi</a> ♡</p>
+    </footer>
+    <script src="src/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Fauna+One&display=swap');
+body{
+    margin: 0;
+    overflow: hidden;
+    background-color: #fff;
+    align-items: center;
+    font-family: 'Fauna One', sans-serif;
+}
+
+[disabled] {
+    pointer-events: none !important;
+  }
+
+.fa{
+    font-size: 30px;
+}
+.game-container{
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 8px 30px;
+    height: 100vh;
+}
+
+.game-container .startbutton{
+    cursor: pointer;
+    background-color: rgb(238, 148, 29);
+    border: none;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 12px 10px;
+    color: #fff;
+    width: 100px;
+    font-size: 15px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+@keyframes pulse {
+    0% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(0.95);
+    }
+  }
+.game-container .startbutton:focus{
+    outline: none;
+}
+.game-container .startbutton:active{
+    transform: scale(0.95);
+}
+
+.game-container .startbutton.disabled{
+    pointer-events: none !important;
+    opacity: 0.25;
+}
+
+.game-container .startbutton.enabled{
+    cursor: pointer;
+    pointer-events: initial;
+    background-color: rgb(238, 148, 29);
+}
+.scoreBoard {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: #000;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    white-space: nowrap;
+}
+.score, .time-bar {
+    margin-right: 100px;
+  }
+
+.game{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    perspective: 800px;
+}
+.flipcard{
+    height: 180px;
+    width: 180px;
+    margin: 5px;
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .65s; 
+    box-shadow: 0px 2px 4px gray;
+    perspective: 100%;
+    border-radius: 8px;
+}
+.flipcard .cards{
+    
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    font-size: 50px;
+    
+}
+.flipcard .front{
+    background-color: #5fe2e4;
+    transform: rotateY(180deg);
+}
+.flipcard .back{
+    background-color: #086e62;
+    
+}
+.flipcard.flip{
+    transform: rotatey(180deg);
+}
+
+
+
+.popup-container{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 2s;
+    /* visibility: hidden; */
+}
+
+
+.lose-popup {
+    margin: auto;
+    border-radius: 8px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+    
+}
+.total-moves, .totalscore{
+    margin-right: 70px;
+}
+
+.lose-popup button{
+    cursor: pointer;
+    background-color: rgb(109, 115, 235);
+    border: none;
+    border-radius: 5px;
+    padding: 12px 10px;
+    color: #fff;
+    width: 120px ;
+    animation: pulse 1.5s infinite ease-in-out;
+    
+}
+.lose-popup button:focus{
+    outline: none;
+}
+.lose-popup button:active{
+    transform: scale(0.95);
+}
+
+/* .popup-container.visible {
+    visibility: visible;
+    transition: all 0.8s;
+}
+.popup-container.hidden {
+    visibility: hidden;
+    transition: all 0.8s;
+} */
+
+
+
+.win-popup-container{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* visibility: hidden; */
+
+}
+.popup{
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+.popup button{
+    cursor: pointer;
+    background-color: rgb(109, 201, 235);
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 12px 10px;
+    color: #fff;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+.popup button:focus{
+    outline: none;
+}
+.popup button:active{
+    transform: scale(0.95);
+}
+/* .win-popup-container.visible {
+    visibility: visible;
+    transition: all 0.8s;
+}
+.win-popup-container.hidden {
+    visibility: hidden;
+    transition: all 0.8s;
+} */
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 0.7em;
+}
+footer p {
+    letter-spacing: 3px;
+    color: rgb(0, 149, 255);
+}
+footer a {
+    color: #000;
+    text-decoration: none;
+}
+footer a:hover {
+    color: rgb(187, 0, 255);
+}
+
+
+@media (max-width: 800px) {
+    .flipcard{
+      height: 150px;
+      width: 150px;
+    }
+  }
+
+  /* @media (max-width: 500px) {
+    .flipcard {
+      height: 100px;
+      width: 100px;
+    }
+    .score,
+    .time-bar {
+      margin-right: 40px;
+    }
+  
+    .total-moves,
+    .totalscore {
+      margin-right: 40px;
+    }
+    .lose-popup {
+      padding: 10px;
+      font-size: 10px;
+    }
+    .lose-popup button {
+      width: 100px;
+    }
+  } */
