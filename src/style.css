@@ -251,15 +251,7 @@ footer a:hover {
     color: rgb(187, 0, 255);
 }
 
-
-@media (max-width: 800px) {
-    .flipcard{
-      height: 150px;
-      width: 150px;
-    }
-  }
-
-  /* @media (max-width: 500px) {
+@media (max-width: 500px) {
     .flipcard {
       height: 100px;
       width: 100px;
@@ -280,4 +272,7 @@ footer a:hover {
     .lose-popup button {
       width: 100px;
     }
-  } */
+    footer {
+      font-size: 0.5em;
+    }
+  }

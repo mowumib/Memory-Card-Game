@@ -1,5 +1,5 @@
 const cards = document.querySelectorAll('.flipcard');
-// const cardsArray = Array.from(cards);
+
 const scoreHolder = document.querySelector(".score-holder");
 const time = document.querySelector('.time-holder');
 const startButton = document.getElementById('startbtn');
